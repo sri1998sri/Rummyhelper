@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/overlay_bg"
+    android:orientation="vertical"
+    android:padding="8dp">
+
+    <!-- Header / Drag Handle -->
+    <LinearLayout
+        android:id="@+id/overlay_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="4dp">
+
+        <ImageView
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:src="@android:drawable/ic_menu_more"
+            android:contentDescription="Drag handle" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Rummy Assistant"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:gravity="center" />
+
+        <Button
+            android:id="@+id/btnMinimize"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:text="−"
+            android:textSize="12sp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:textColor="@color/white" />
+
+        <Button
+            android:id="@+id/btnClose"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:text="✕"
+            android:textSize="12sp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#44FFFFFF"
+        android:layout_marginBottom="8dp" />
+
+    <!-- Hand Display Area -->
+    <TextView
+        android:id="@+id/txtSortedHand"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="No cards detected"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:gravity="center"
+        android:padding="4dp" />
+
+    <!-- Actions -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="8dp">
+
+        <Button
+            android:id="@+id/btnInspectArrangements"
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:text="Inspect"
+            android:textSize="10sp"
+            android:layout_marginEnd="4dp" />
+
+        <Button
+            android:id="@+id/btnOpenMain"
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:text="Main"
+            android:textSize="10sp" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Floating Rummy Assistant</string>
+    <string name="accessibility_service_description">Assists in recognizing and organizing Rummy cards from the screen.</string>
+</resources>
