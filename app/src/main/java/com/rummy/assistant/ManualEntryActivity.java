@@ -122,7 +122,7 @@ public class ManualEntryActivity extends AppCompatActivity {
         }
 
         @Override
-        public CardViewHolder onBindViewHolder(CardViewHolder holder, int position) {
+        public void onBindViewHolder(CardViewHolder holder, int position) {
             Card card = cards.get(position);
             holder.txtValue.setText(card.toString());
 
@@ -133,7 +133,6 @@ public class ManualEntryActivity extends AppCompatActivity {
             }
 
             holder.itemView.setOnClickListener(v -> listener.onCardClick(card));
-            return holder;
         }
 
         @Override
