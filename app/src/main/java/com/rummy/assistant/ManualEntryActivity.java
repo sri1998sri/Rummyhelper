@@ -96,14 +96,15 @@ public class ManualEntryActivity extends AppCompatActivity {
         adapter.notifyDataSetChanged();
     }
 
+    public interface OnCardClickListener {
+        void onCardClick(Card card);
+    }
+
     private class CardAdapter extends RecyclerView.Adapter<CardAdapter.CardViewHolder> {
         private final List<Card> cards;
         private List<Card> selectedCards;
         private final OnCardClickListener listener;
 
-        interface OnCardClickListener {
-            void onCardClick(Card card);
-        }
 
         CardAdapter(List<Card> cards, OnCardClickListener listener) {
             this.cards = cards;
